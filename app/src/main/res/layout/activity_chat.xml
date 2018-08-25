@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whit"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:theme="@style/Base.ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"/>
+<LinearLayout
+    android:id="@+id/yyy"
+    android:layout_width="match_parent"
+    android:layout_below="@id/toolbar"
+    android:weightSum="2"
+
+    android:layout_height="wrap_content">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="wait for connection"
+        android:layout_weight="1"
+        android:id="@+id/waitforconnection"
+        android:textColor="@android:color/holo_green_dark"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="send for connection"
+        android:layout_weight="1"
+        android:id="@+id/sendforconnection"
+        android:textColor="@android:color/holo_green_dark"
+        />
+</LinearLayout>
+   <android.support.v7.widget.RecyclerView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:layout_marginTop="10dp"
+      android:layout_below="@id/yyy"
+
+       android:layout_marginBottom="70dp"
+       android:id="@+id/recyclerview"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="mesaage here..."
+            android:layout_weight="2.0"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/edittext"/>
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="0"
+            android:scaleType="center"
+            android:background="@drawable/circlesend"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/ic_send_black_24dp"
+            android:id="@+id/sendImage"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
